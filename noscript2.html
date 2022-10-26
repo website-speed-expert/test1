@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 <noscript>
@@ -18,19 +18,19 @@ var aaa=0;
 
 <body>
 <script>
-var nos = document.getElementsByTagName("noscript")[0]; 
-var nosHtml = nos.textContent||nos.innerHTML; 
-//  var src = nosHtml.split('src=')[1].split(/[ >]/)[0];
-var src = nosHtml.split('src=');
+var ns = document.getElementsByTagName("noscript")[0]; 
+var nsHtml = nos.textContent||ns.innerHTML; 
+//  var src = nsHtml.split('src=')[1].split(/[ >]/)[0];
+var src = nsHtml.split('src=');
 //alert("==>" + src);
 for (i=1; i<src.length; i++){
 console.log(i+"==="+src[i].split(/[ >]/)[0]);	
 }
-/*if ( nosHtml )
+/*if ( nsHtml )
 {
-	nosHtml=nosHtml.replaceAll("script async src", "script async s-src");
-	nosHtml=nosHtml.replaceAll("link href", "link shopify-href");
-	nosHtml=nosHtml.replaceAll("script id", "script type='modulescript' id");
+	nsHtml=nsHtml.replaceAll("script async src", "script async s-src");
+	nsHtml=nsHtml.replaceAll("link href", "link shopify-href");
+	nsHtml=nsHtml.replaceAll("script id", "script type='modulescript' id");
 	var temp = document.createElement("div");
 	temp.innerHTML = nosHtml;
 	document.body.appendChild(temp);
